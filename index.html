@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Encrypt</title>
+	<link rel="stylesheet" href="css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+	<!-- For google font inter-->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet"> 
+	<link rel="icon" type="image/x-icon" href="Image/favicon.ico">
+</head>
+<body>
+	<header>
+		<div class="logoDiv">
+			<img id="logoImage" src="Image/logo.png" title="Logo" alt="logo alura" />
+			<img id="logoTabletMobile" src="Image/logoTablet.png" title="Logo" alt="logo alura" />
+		</div>
+	</header>
+	<main id = "mainPrincipal">
+		<section id="firtsColumn">
+			<textarea id="textArea" name="text" placeholder="Enter the text here"></textarea> 
+			<div id="alertDiv">
+				<img src="Image/exclamation-circle.png" title="exclamation circle" alt="exclamation circle"/>
+				<h6 class="information">
+					Only lowercase letters and no accent
+				</h6>
+			</div>
+			<div id="frame3">
+				<button id="buttonEncrypt">Encrypt</button> 
+				<button id="buttonDecrypt">Decrypt</button>
+			</div>
+		</section>
+		<section id="secondColumn">
+			<textarea id="resultTextArea"></textarea>
+			<!--<img class="dollImg" src="Image/doll.png" alt="doll"/>-->
+			<div class="textAreaElements">
+				<p class="alert1">No message was found</p>
+				<p class="alert2">Enter the text you want to encrypt or decrypt.</p>   
+			</div>
+			<button id="buttonCopy">Copy</button>
+		</section>
+	</main >
+	<footer class="footerClass">
+		<h5 >By Jesus Monroy</h5>
+	</footer>
+	<script src="js/scritp.js"></script>
+</body>
+</html>
