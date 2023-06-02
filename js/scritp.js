@@ -7,7 +7,6 @@ function sanitizeText (text){
 }
 
 function encrypt(){
-    
     let message=document.getElementById("textArea");
     message=sanitizeText(message.value.toLowerCase());
     if (message){
@@ -39,6 +38,15 @@ function decrypt(){
 function copy(){
     let copyTextArea= document.getElementById("resultTextArea");
     navigator.clipboard.writeText(copyTextArea.value);
+    
+    let customAlert = document.getElementById("customAlert");
+    let customAlertMessage = document.getElementById("customAlertMessage");
+    customAlertMessage.textContent = "The text was copied";
+    customAlert.classList.remove("hidden");
+
+    setTimeout(function() {
+        customAlert.classList.add("hidden");
+    },1500);
 }
 
 function hiddenElements(){
