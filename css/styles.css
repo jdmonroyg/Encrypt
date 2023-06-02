@@ -48,7 +48,7 @@ body{
 #alertDiv{
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.8rem;
 }
 .information{
   font-size: 1.2rem;
@@ -66,7 +66,7 @@ body{
   width: 100%;
 
   border: none;
-  border-radius: 20px;
+  border-radius: 2rem;
   color: #F3F5FC;
   background: #0A3871; 
   
@@ -77,8 +77,8 @@ body{
   align-items: center;
   padding: 1.8rem;
   width: 100%;
-  border-radius: 20px;
-  border: 1px solid #0A3871;  
+  border-radius: 2rem;
+  border: 0.1rem solid #0A3871;  
   background-color: #F3F5FC;
   color: #0A3871;
 
@@ -110,7 +110,7 @@ body{
   border: none;
   outline: none;
   resize: none;
-  border-radius: 20px;
+  border-radius: 2rem;
   padding: 5%;
   /*para que no se desborde*/
   box-sizing: border-box;
@@ -122,7 +122,7 @@ body{
   display: flex;
   flex-direction: column;
   width: 98%;
-  gap: 16px;
+  gap: 1.6rem;
   top: 58%;
   background-color: white;
   padding: 5%;
@@ -149,8 +149,8 @@ body{
   padding: 1.8rem;
   width: 92%;
   
-  border-radius: 20px;
-  border: 1px solid #0A3871;
+  border-radius: 2rem;
+  border: 0.1rem solid #0A3871;
   background-color: #ffffff;
   color: #0A3871;
   
@@ -186,8 +186,8 @@ body{
   background: #0A3871;
   text-align: center;
   color: #ffffff;
-  border-radius: 20px;
-  margin: 2px;
+  border-radius: 2rem;
+  margin: 0.2rem;
   font-size: 1.3rem;
   padding: 1rem;
 }
@@ -207,7 +207,7 @@ nav a{
 posicion aboluta se mueve de acuerdo a un padre con position relative
 */
 
-@media screen and (max-width:768px){
+@media (width <=768px){
   html{
     font-size: 45%;
   }
@@ -235,7 +235,7 @@ posicion aboluta se mueve de acuerdo a un padre con position relative
   .textAreaElements{
     top: 40%;
   }
-  @media screen and (max-width:375px){
+  @media (width <=375px){
     #frame3{
       display: block;
     }
