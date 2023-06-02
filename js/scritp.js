@@ -12,6 +12,8 @@ function crypt(){
     let message=document.getElementById("textArea").value;
     if (validateText(message)){
         alert("Only lowercase letters and no accent");
+        location.reload();
+        return "";
     }
     if (message){
         hiddenElements();
