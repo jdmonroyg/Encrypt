@@ -1,19 +1,28 @@
 //   [^a-zA-Z0-9]/g indica que la expresion regular busca los caracteres distintos a los ingresados, donde /g busca todas las coincidencias de la cadena. 
 //   ^[a-zA-Z0-9]+$ aca la expresion regular busca los caracteres descritos.
+const resultText=document.getElementById("resultTextArea");
 
-function sanitizeText (text){
-    let regex= /[^a-zA-Z0-9\s,.]/g;
-    return text.replace(regex,"");
+function validateText (text){
+    let regexSpecialCharacters= /[^a-z0-9\s,.]/;
+    let regexCapitalLetter= /[A-Z]/;
+    return regexSpecialCharacters.test(text) || regexCapitalLetter.test(text);
 }
 
-function encrypt(){
-    let message=document.getElementById("textArea");
-    message=sanitizeText(message.value.toLowerCase());
+function crypt(){
+    let message=document.getElementById("textArea").value;
+    if (validateText(message)){
+        alert("Only lowercase letters and no accent");
+    }
     if (message){
         hiddenElements();
     }
-    const result = document.getElementById("resultTextArea");
-    result.innerHTML = message.replace(/e/g, "enter")
+    
+    return message;
+}
+
+function encrypt(){
+    let message = crypt();
+    resultText.innerHTML = message.replace(/e/g, "enter")
         .replace(/i/g, "imes")
         .replace(/a/g, "ai")
         .replace(/o/g, "ober")
@@ -21,14 +30,8 @@ function encrypt(){
 }
 
 function decrypt(){
-    let message=document.getElementById("textArea");
-    message=sanitizeText(message.value.toLowerCase());
-    if (message){
-        hiddenElements();
-    }
-    
-    const result = document.getElementById("resultTextArea");
-    result.innerHTML = message.replace(/enter/g, "e")
+    let message = crypt();
+    resultText.innerHTML = message.replace(/enter/g, "e")
         .replace(/imes/g, "i")
         .replace(/ai/g, "a")
         .replace(/ober/g, "o")
@@ -36,7 +39,7 @@ function decrypt(){
 }
 
 function copy(){
-    let copyTextArea= document.getElementById("resultTextArea");
+    let copyTextArea= resultText;
     navigator.clipboard.writeText(copyTextArea.value);
     
     let customAlert = document.getElementById("customAlert");

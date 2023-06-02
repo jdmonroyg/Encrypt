@@ -36,6 +36,7 @@ body{
 }
 #textArea{
   height: 100%;
+  width: 100%;
   background-color: #F3F5FC;
   color: #0A3871;
   /* border es para que no tenga bordes outline que no tenga la linea de a fuera y resize para que no se pueda modificar*/
@@ -61,7 +62,7 @@ body{
 }
 #buttonEncrypt {
   align-items: center;
-  padding: 18px;
+  padding: 1.8rem;
   width: 100%;
 
   border: none;
@@ -74,7 +75,7 @@ body{
 }
 #buttonDecrypt {
   align-items: center;
-  padding: 18px;
+  padding: 1.8rem;
   width: 100%;
   border-radius: 20px;
   border: 1px solid #0A3871;  
@@ -145,7 +146,7 @@ body{
   bottom: 1%;
   left: 4%;
 
-  padding: 18px;
+  padding: 1.8rem;
   width: 92%;
   
   border-radius: 20px;
@@ -192,10 +193,14 @@ body{
 }
 
 nav{
-  padding-top: 1%;
+  padding: 1rem 0;
 }
 nav a{
   margin-left: 1%;
+}
+
+.iconSM{
+  width: 3.2rem;
 }
 
 /* position relative para mover en relacion a supocion original
