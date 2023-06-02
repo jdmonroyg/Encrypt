@@ -15,7 +15,7 @@ body{
   column-gap:1%;
   /*top right bottom left*/
   padding: 1% 1% 0 1%;
-  height: 98vh;
+  height: 89vh;
 
   box-sizing: border-box;
 }
@@ -157,13 +157,45 @@ body{
   font-size: 1.6rem;
 }
 
+#customAlert {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  /*center element with position fixed*/
+  transform: translate(-50%, -50%);
+  border: 0.1rem solid #0A3871;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  /*box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit */
+  box-shadow: 0 0 0.7rem 0.3rem #0A3871;
+  
+}
+
+.hidden {
+  display: none;
+}
+
+#customAlertMessage{
+  color: #0A3871;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
 .footerClass{
   background: #0A3871;
   text-align: center;
   color: #ffffff;
   border-radius: 20px;
   margin: 2px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  padding: 1rem;
+}
+
+nav{
+  padding-top: 1%;
+}
+nav a{
+  margin-left: 1%;
 }
 
 /* position relative para mover en relacion a supocion original
@@ -191,6 +223,13 @@ posicion aboluta se mueve de acuerdo a un padre con position relative
   #firtsColumn{
     margin-top: 23%;
   }
+  #resultTextArea{
+    background-image: none;
+    text-align: center;
+  }
+  .textAreaElements{
+    top: 40%;
+  }
   @media screen and (max-width:375px){
     #frame3{
       display: block;
@@ -199,12 +238,4 @@ posicion aboluta se mueve de acuerdo a un padre con position relative
       margin-bottom: 4%;
     }
   }
-  #resultTextArea{
-    background-image: none;
-    text-align: center;
-  }
-  .textAreaElements{
-    top: 40%;
-  }
-  
 }
